@@ -1,24 +1,43 @@
 import './App.css';
-import { useRef, useLayoutEffect, useEffect } from 'react';
+import { useRef, useLayoutEffect, useEffect, useState } from 'react';
 
 function App() {
 const scroller = useRef();
 
+const [touch, setTouch] = useState(false)
 
-  let current = 0;
-  let previous = 0;
+
+  let position = 0;
   let rounded = 0;
-  let ease = .2;
+  let speed = 0;
+
+if (!touch) {
+  window.addEventListener('wheel', (e)=>{
+    speed = e.deltaY * .0005
+   })
+}
+if (touch){
+
+}
+  
 
   const scrolling = () => {
-  current = window.scrollY;
-  previous += (current - previous) * ease;
-  rounded = Math.round(previous * 100) / 100;
+    
+  position += speed;
 
-  scroller.current.style.transform = `translate3d(0, ${rounded}px, 0)`
+  //INERTIA: speed less than 1
+  speed *=.8;
   
+  rounded = Math.round(position);
   
-  console.log(rounded)
+  let difference = (rounded - position);
+ 
+  //SLIDE BACK SPEED
+  position += difference*.05;
+  scroller.current.style.transform = `translate3d(0, ${position*100}px, 0)`
+  
+  console.log(difference)
+
   requestAnimationFrame(()=> scrolling());
   }
   useEffect(()=>{
