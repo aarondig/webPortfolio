@@ -1,0 +1,14 @@
+.App {
+  background: white;
+  height: 500vh;
+}
+
+.scroller {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: red;
+
+}
+
+
