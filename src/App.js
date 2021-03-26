@@ -11,14 +11,13 @@ const [touch, setTouch] = useState(false)
   let rounded = 0;
   let speed = 0;
 
-if (!touch) {
+  
   window.addEventListener('wheel', (e)=>{
     speed = e.deltaY * .0005
    })
-}
-if (touch){
 
-}
+
+
   
 
   const scrolling = () => {
