@@ -1,14 +1,31 @@
 .App {
-  background: white;
-  height: 500vh;
-}
-
-.scroller {
   position: fixed;
-  width: 200px;
-  height: 200px;
-  background: red;
+  top: 0;
+  left: 0;
+  height: 500vh;
+  width: 100%;
+}
 
+body {
+  overflow: hidden;
 }
 
 
+#scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(20, 20, 20);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
