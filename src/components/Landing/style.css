@@ -2,10 +2,9 @@
     height: 100vh;
     width: 100%;
     background: #efefef;
-
 }
 
-.helloC {
+.centerWrap {
     width: 80%;
     height: 100%;
     display: flex;
@@ -14,7 +13,87 @@
     margin-left: auto;
     margin-right: auto;
 }
-.hello {
-    font-size: 200px;
-    color: rgb(214, 214, 214);
+.mainTextC {
+    position: relative;
+    width: 100%;
+}
+.mainText {
+    margin: 0;
+    font-size: 12.5vw;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-right: -10%;
+    z-index: 1;
+    
+}
+.mainSubTextC {
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    bottom: 68.4%;
+    right: 0;
+}
+.mainSubText {
+    position: relative;
+    /* bottom: 40px; */
+    width: 50%;
+    margin-top: 5vw;
+    top: 55%;
+    left: 3vw;
+
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    border-top: 1px solid black;
+}
+/* .underline {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: black;
+} */
+
+.mainImageC {
+    left: 0%;
+    position: absolute;
+    width: 70%;
+    height: 22%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+.mainImage {
+    width: 40%;
+height: 100%;
+object-fit: cover;
+background: grey;
+}
+.mainImgTextC {
+    position:relative;
+    width: 12%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.mainImgText {
+    width: 90%;
+    /* max-width: 100px; */
+    transform: rotateZ(90deg);
+    font-size: 1.8vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line {
+    position: relative;
+    margin-top: 30%;
+    height: 100%;
+    width: 1px;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
 }
